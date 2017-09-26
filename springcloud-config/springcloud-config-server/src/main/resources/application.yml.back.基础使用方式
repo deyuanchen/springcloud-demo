@@ -1,0 +1,13 @@
+server:
+  port: 8080
+
+#git文件上{application}-dev中的application
+spring:
+  application:
+    name: spring-cloud-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://git.oschina.net/chendeyuan/spring-cloud-config/  #使用通配符的方式进行设置，可以实现一个git仓库对应一个微服务application
+          search-paths: configs
